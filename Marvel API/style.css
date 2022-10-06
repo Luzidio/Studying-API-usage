@@ -1,53 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@400&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
-header {
-  color: red;
-  text-align: center;
+:root{
+    --primary-color:  #e62c0b;
+    --secondary-color:  #c20202;
 }
 
-img {
-  width: 300px;
+
+.d-flex{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: #000;
+}
+
+i {
+    color: #fff;
+    font-size: 2rem;
+}
+
+
 
 .container {
-  max-width: 1440px;
-  margin-inline: 0;
+    max-width: 1440px;
+    margin: 30px auto;
+    
 }
 
-section.heros {
-  max-width: 1400px;
-  border-radius: 10px;
-  padding: 15px;
-  margin: auto;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
-  border: 1px solid green;
-  margin: auto;
+.header .header-container{
+    max-width: 1300px;
+    margin-inline: auto;
 }
 
-#personagem {
-  display: flex;
-  flex-wrap: wrap;
+.header .navbar {   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.child {
-  text-align: center;
-  width: 50%;
+.header .navbar .logo {
+    color: var(--primary-color);
+    font-size: 1.7rem;
 }
 
-.father {
-  display: flex;
-  flex-direction: row;
-  gap: 10rem;
-
-  border: 3px solid red;
-  margin: 20px;
+.header .navbar .nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
+
+.header .navbar .nav li a{
+    color: #fff;
+}
+
+.header .navbar .search {
+    background: transparent;
+    width: 20rem;
+    height: 2.5rem;
+    padding-left: 2.5rem;
+    font-size: 1rem;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50px;
+}
+
+
+.header .navbar .search:focus{
+    outline:0;
+    background: var(--primary-color);
+}
+
+.header .navbar .search::placeholder {
+    color: #7378c5;
+}
+
+.main {
+    margin-top:8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.character {
+    width: 300px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0.2px 4px 5px rgba(0,0,0,0.2);
+    background-color: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.character .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+    letter-spacing: .5px;
+}
+
+.character img {
+    width: 100%;
+}
+
+.character .description {
+    max-height: 100%;
+    background: #111;
+    padding: 1rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.character:hover .description {
+    transform: translateX(0);
+}
+
+
+
+
