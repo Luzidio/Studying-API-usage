@@ -13,6 +13,6 @@ getMovies(requestURL);
 function getMovies(url) {
     fetch(url).then(res => res.json()).then(data => {
         console.log(data.data.results);
-      
+  
     })
 }
